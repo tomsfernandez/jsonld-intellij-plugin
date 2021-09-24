@@ -40,7 +40,7 @@
       "http://www.w3.org/ns/shacl#name": "A"
     },
     {
-      "@id": "file://transform/src/test/resources/transformations/simple/api.raml#/web-api",
+      "@id": "file://transform/src/test/resources/transformations/simple/api.raml#/web-ap",
       "@type": [
         "http://a.ml/vocabularies/apiContract#WebAPI",
         "file://vocabulary/src/main/resources/dialects/canonical_webapi_spec.yaml#/declarations/WebAPI",
