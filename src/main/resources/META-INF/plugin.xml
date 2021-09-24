@@ -1,18 +1,13 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.tomsfernandez.jsonldintellijplugin</id>
-    <name>jsonld-intellij-plugin</name>
+    <name>JSON-LD</name>
     <vendor>tomsfernandez</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.json</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.tomsfernandez.jsonldintellijplugin.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.tomsfernandez.jsonldintellijplugin.services.MyProjectService"/>
+        <lang.directNavigationProvider implementation="com.github.tomsfernandez.jsonldintellijplugin.JsonLinkDirectNavigation"/>
     </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.tomsfernandez.jsonldintellijplugin.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
 </idea-plugin>
