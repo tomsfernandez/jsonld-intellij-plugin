@@ -1,8 +1,8 @@
 # JSON-LD Intellij Plugin
 
 ![Build](https://github.com/tomsfernandez/jsonld-intellij-plugin/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/17674-json-ld)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/17674-json-ld)
+[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/17675-json-ld)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/17675-json-ld)
 
 <!-- Plugin description -->
 Plugin with basic support for flattened JSON-LD files.
