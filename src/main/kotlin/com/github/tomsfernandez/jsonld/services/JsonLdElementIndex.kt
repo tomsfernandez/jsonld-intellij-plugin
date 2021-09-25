@@ -11,4 +11,5 @@ class JsonLdElementIndexService {
 
     fun get(filePath: String): Map<String, PsiElement>? = cache[filePath]
     fun add(filePath: String, links: Map<String, PsiElement>) = cache.put(filePath, links)
+    fun remove(filePath: String) = cache.remove(filePath)
 }

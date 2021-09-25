@@ -20,7 +20,7 @@ class FileUpdateJsonLdListener(private val project: Project): BulkFileListener {
         jsonLdEvents.forEach { e ->
             withPsiFile(e.file) { psiFile ->
                 when(e) {
-                    is VFileDeleteEvent -> println("Detected delete!")
+                    is VFileDeleteEvent -> cache.remove(e.path)
                     is VFileContentChangeEvent -> cache.add(e.path, JsonLd.buildIdToElementMap(psiFile))
                 }
             }
