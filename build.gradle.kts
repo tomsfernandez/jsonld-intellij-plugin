@@ -50,6 +50,10 @@ qodana {
     showReport.set(System.getenv("QODANA_SHOW_REPORT").toBoolean())
 }
 
+tasks.buildSearchableOptions {
+    enabled = false
+}
+
 tasks {
     // Set the JVM compatibility versions
     properties("javaVersion").let {
