@@ -21,7 +21,121 @@
       "http://a.ml/vocabularies/document#location": "file://transform/src/test/resources/transformations/simple/api.raml"
     },
     {
+      "@id": "file://transform/src/test/resources/transformations/simple/api.raml#/declarations/types/asdasdasdad",
+      "@type": [
+        "http://www.w3.org/ns/shacl#NodeShape",
+        "file://vocabulary/src/main/resources/dialects/canonical_webapi_spec.yaml#/declarations/NodeShape",
+        "http://a.ml/vocabularies/meta#DialectDomainElement",
+        "http://a.ml/vocabularies/document#DomainElement"
+      ],
+      "http://www.w3.org/ns/shacl#property": [
+        {
+          "@id": "file://transform/src/test/resources/transformations/simple/api.raml#/declarations/types/D"
+        },
+        {
+          "@id": "file://transform/src/test/resources/transformations/simple/api.raml#/declarations/types/A/property/a"
+        }
+      ],
+      "http://www.w3.org/ns/shacl#closed": false,
+      "http://www.w3.org/ns/shacl#name": "A"
+    },
+    {
+      "@id": "file://transform/src/test/resources/transformations/simple/api.raml#/declarations/types/asdasdasdaasdasdasdasdasdd",
+      "@type": [
+        "http://www.w3.org/ns/shacl#NodeShape",
+        "file://vocabulary/src/main/resources/dialects/canonical_webapi_spec.yaml#/declarations/NodeShape",
+        "http://a.ml/vocabularies/meta#DialectDomainElement",
+        "http://a.ml/vocabularies/document#DomainElement"
+      ],
+      "http://www.w3.org/ns/shacl#property": [
+        {
+          "@id": "file://transform/src/test/resources/transformations/simple/api.raml#/declarations/types/D"
+        },
+        {
+          "@id": "file://transform/src/test/resources/transformations/simple/api.raml#/declarations/types/A/property/a"
+        }
+      ],
+      "http://www.w3.org/ns/shacl#closed": false,
+      "http://www.w3.org/ns/shacl#name": "A"
+    },
+    {
+      "@id": "file://transform/src/test/resources/transformations/simple/api.raml#/declarations/types/",
+      "@type": [
+        "http://www.w3.org/ns/shacl#NodeShape",
+        "file://vocabulary/src/main/resources/dialects/canonical_webapi_spec.yaml#/declarations/NodeShape",
+        "http://a.ml/vocabularies/meta#DialectDomainElement",
+        "http://a.ml/vocabularies/document#DomainElement"
+      ],
+      "http://www.w3.org/ns/shacl#property": [
+        {
+          "@id": "file://transform/src/test/resources/transformations/simple/api.raml#/declarations/types/D"
+        },
+        {
+          "@id": "file://transform/src/test/resources/transformations/simple/api.raml#/declarations/types/A/property/a"
+        }
+      ],
+      "http://www.w3.org/ns/shacl#closed": false,
+      "http://www.w3.org/ns/shacl#name": "A"
+    },
+    {
+      "@id": "file://transform/src/test/resources/transformations/simple/api.raml#/declarations/types/asda",
+      "@type": [
+        "http://www.w3.org/ns/shacl#NodeShape",
+        "file://vocabulary/src/main/resources/dialects/canonical_webapi_spec.yaml#/declarations/NodeShape",
+        "http://a.ml/vocabularies/meta#DialectDomainElement",
+        "http://a.ml/vocabularies/document#DomainElement"
+      ],
+      "http://www.w3.org/ns/shacl#property": [
+        {
+          "@id": "file://transform/src/test/resources/transformations/simple/api.raml#/declarations/types/D"
+        },
+        {
+          "@id": "file://transform/src/test/resources/transformations/simple/api.raml#/declarations/types/A/property/a"
+        }
+      ],
+      "http://www.w3.org/ns/shacl#closed": false,
+      "http://www.w3.org/ns/shacl#name": "A"
+    },
+    {
       "@id": "file://transform/src/test/resources/transformations/simple/api.raml#/declarations/types/A",
+      "@type": [
+        "http://www.w3.org/ns/shacl#NodeShape",
+        "file://vocabulary/src/main/resources/dialects/canonical_webapi_spec.yaml#/declarations/NodeShape",
+        "http://a.ml/vocabularies/meta#DialectDomainElement",
+        "http://a.ml/vocabularies/document#DomainElement"
+      ],
+      "http://www.w3.org/ns/shacl#property": [
+        {
+          "@id": "file://transform/src/test/resources/transformations/simple/api.raml#/declarations/types/D"
+        },
+        {
+          "@id": "file://transform/src/test/resources/transformations/simple/api.raml#/declarations/types/A/property/a"
+        }
+      ],
+      "http://www.w3.org/ns/shacl#closed": false,
+      "http://www.w3.org/ns/shacl#name": "A"
+    },
+    {
+      "@id": "file://transform/src/test/resources/transformations/simple/api.raml#/declarations/types/G",
+      "@type": [
+        "http://www.w3.org/ns/shacl#NodeShape",
+        "file://vocabulary/src/main/resources/dialects/canonical_webapi_spec.yaml#/declarations/NodeShape",
+        "http://a.ml/vocabularies/meta#DialectDomainElement",
+        "http://a.ml/vocabularies/document#DomainElement"
+      ],
+      "http://www.w3.org/ns/shacl#property": [
+        {
+          "@id": "file://transform/src/test/resources/transformations/simple/api.raml#/declarations/types/G"
+        },
+        {
+          "@id": "file://transform/src/test/resources/transformations/simple/api.raml#/declarations/types/A/property/a"
+        }
+      ],
+      "http://www.w3.org/ns/shacl#closed": false,
+      "http://www.w3.org/ns/shacl#name": "A"
+    },
+    {
+      "@id": "file://transform/src/test/resources/transformations/simple/api.raml#/declarations/types/D",
       "@type": [
         "http://www.w3.org/ns/shacl#NodeShape",
         "file://vocabulary/src/main/resources/dialects/canonical_webapi_spec.yaml#/declarations/NodeShape",
@@ -268,7 +382,7 @@
         "http://a.ml/vocabularies/meta#DialectDomainElement",
         "http://a.ml/vocabularies/document#DomainElement"
       ],
-      "http://www.w3.org/ns/shacl#datatype": [
+      "http://www.w3.org/ns/jhgfcl#datatype": [
         {
           "@id": "http://www.w3.org/2001/XMLSchema#string"
         }

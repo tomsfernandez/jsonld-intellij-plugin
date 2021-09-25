@@ -8,7 +8,8 @@
     <depends>com.intellij.modules.json</depends>
 
     <projectListeners>
-        <listener class="com.github.tomsfernandez.jsonld.listeners.JsonLdFileListener" topic="com.intellij.openapi.fileEditor.FileEditorManagerListener"/>
+        <listener class="com.github.tomsfernandez.jsonld.listeners.UpdateJsonLdCacheOnCreateListener" topic="com.intellij.openapi.fileEditor.FileEditorManagerListener"/>
+        <listener class="com.github.tomsfernandez.jsonld.listeners.FileUpdateJsonLdListener" topic="com.intellij.openapi.vfs.newvfs.BulkFileListener"/>
     </projectListeners>
 
     <extensions defaultExtensionNs="com.intellij">

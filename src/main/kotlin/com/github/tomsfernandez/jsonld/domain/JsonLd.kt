@@ -17,23 +17,6 @@ object JsonLd {
         }.toMap()
     }
 
-    fun findAllIdsWithoutTarget(file: PsiFile): List<PsiElement> {
-        val idsToElement = buildIdToElementMap(file)
-        return idsToElement.flatMap { entry ->
-            val linksInElement = findLinksIn(entry.value)
-            linksInElement.filter { linkElement -> idsToElement[linkElement.text] != null }
-        }
-    }
-
-    fun findLinksIn(element: PsiElement): List<PsiElement> {
-        return JsonLdLinkCollector().collectLinksIn(element)
-    }
-
-    fun findElementWithId(id: String, file: PsiFile): PsiElement? {
-        val graphNodes = findGraphArray(file)?.children ?: return null
-        return graphNodes.find { element -> findIdPropertyValue(element) == id }
-    }
-
     private fun findGraphArray(file: PsiFile): PsiElement? {
         val objectNode = findObjectNode(file)
         if (objectNode !is JsonObjectImpl) return null

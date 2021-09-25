@@ -2,22 +2,28 @@ package com.github.tomsfernandez.jsonld.listeners
 
 import com.github.tomsfernandez.jsonld.domain.JsonLd
 import com.github.tomsfernandez.jsonld.services.JsonLdElementIndexService
-import com.intellij.openapi.editor.actionSystem.EditorActionManager
+import com.intellij.openapi.components.service
+import com.intellij.openapi.diagnostic.Logger
 import com.intellij.openapi.fileEditor.FileEditorManager
 import com.intellij.openapi.fileEditor.FileEditorManagerListener
 import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.psi.PsiManager
 
-class JsonLdFileListener : FileEditorManagerListener {
+class UpdateJsonLdCacheOnCreateListener : FileEditorManagerListener {
+
+    private val log: Logger = Logger.getInstance(this::class.java)
 
     override fun fileOpened(source: FileEditorManager, file: VirtualFile) {
-        val cacheService = source.project.getService(JsonLdElementIndexService()::class.java)
+        val cacheService = service<JsonLdElementIndexService>()
         val psiFile = PsiManager.getInstance(source.project).findFile(file)
-        println("Caching....")
-        if (psiFile == null) return
+
+        if (psiFile == null) {
+            log.error("Didn't find PSI File for ${file.path}")
+            return
+        }
 
         val entries = JsonLd.buildIdToElementMap(psiFile)
-        println("Cached ${file.path} with ${entries.size} elements")
+        log.debug("Cached ${file.path} with ${entries.size} elements")
         cacheService.add(file.path, entries)
     }
 }

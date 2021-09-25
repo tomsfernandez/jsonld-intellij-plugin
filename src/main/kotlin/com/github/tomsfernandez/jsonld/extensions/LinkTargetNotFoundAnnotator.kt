@@ -2,15 +2,14 @@ package com.github.tomsfernandez.jsonld.extensions
 
 import com.github.tomsfernandez.jsonld.common.fileIsJsonLd
 import com.github.tomsfernandez.jsonld.common.isStringLiteral
-import com.github.tomsfernandez.jsonld.domain.JsonLd
 import com.github.tomsfernandez.jsonld.services.JsonLdElementIndexService
-import com.intellij.codeInspection.ProblemHighlightType
 import com.intellij.json.psi.JsonProperty
 import com.intellij.lang.annotation.AnnotationHolder
 import com.intellij.lang.annotation.Annotator
 import com.intellij.lang.annotation.HighlightSeverity
-import com.intellij.openapi.util.TextRange
+import com.intellij.openapi.components.service
 import com.intellij.psi.PsiElement
+import com.intellij.psi.util.parents
 
 class LinkTargetNotFoundAnnotator : Annotator {
 
@@ -19,8 +18,10 @@ class LinkTargetNotFoundAnnotator : Annotator {
         if (!shouldAnnotate) return
 
         val possibleProperty = element.parent
+
         if (possibleProperty !is JsonProperty) return
         else if (possibleProperty.name != "@id") return
+        else if (isTopLevelElementId(element)) return
 
         val elements = getCachedJson(element)
         val linkTarget = elements?.get(possibleProperty.value?.text)
@@ -32,5 +33,7 @@ class LinkTargetNotFoundAnnotator : Annotator {
         }
     }
 
-    private fun getCachedJson(element: PsiElement) = element.project.getService(JsonLdElementIndexService::class.java).get(element.containingFile.virtualFile.path)
+    private fun isTopLevelElementId(element: PsiElement) = element.parents.toList().size <= 6
+
+    private fun getCachedJson(element: PsiElement) = service<JsonLdElementIndexService>().get(element.containingFile.virtualFile.path)
 }
