@@ -14,6 +14,7 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <lang.directNavigationProvider implementation="com.github.tomsfernandez.jsonld.experimental.JsonLinkDirectNavigation"/>
+        <fileType name="JSON-LD" implementationClass="com.github.tomsfernandez.jsonld.lang.JsonLdFileType" language="JSON" extensions="jsonld"/>
 <!--        <annotator language="JSON" implementationClass="com.github.tomsfernandez.jsonld.extensions.LinkTargetNotFoundAnnotator"/>-->
         <projectService serviceImplementation="com.github.tomsfernandez.jsonld.services.JsonLdElementIndexService" />
     </extensions>
