@@ -3,5 +3,9 @@
 # jsonld-intellij-plugin Changelog
 
 ## [Unreleased]
-### Added
-- Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
+
+## [0.0.2]
+- Added auto association of "jsonld" extension to JSON syntax and features
+- Removed "unknown link" warning as JSON-LDs can be open-world.
+- Added support for 213.* versions
+
