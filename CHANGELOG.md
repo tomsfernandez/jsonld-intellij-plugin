@@ -3,5 +3,7 @@
 # jsonld-intellij-plugin Changelog
 
 ## [Unreleased]
-### Added
-- Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
+
+## [0.0.3]
+- Added Plugin Logo to that the plugin is available in the JetBrains Marketplace
+
