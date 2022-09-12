@@ -4,8 +4,10 @@
 
 ## [Unreleased]
 
+## [0.0.5]
+Changed upper limit build to be 222.*
+
 ## [0.0.2]
 - Added auto association of "jsonld" extension to JSON syntax and features
 - Removed "unknown link" warning as JSON-LDs can be open-world.
 - Added support for 213.* versions
-
